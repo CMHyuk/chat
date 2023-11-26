@@ -15,7 +15,9 @@ public class Room extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
+
     @Column(unique = true)
     private String roomId;          // uuid
 

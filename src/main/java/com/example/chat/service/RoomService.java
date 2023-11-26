@@ -63,7 +63,7 @@ public class RoomService {
         Store store = storeRepository.findById(dto.getStoreId())
                 .orElseThrow();
 
-        User receiver = store.getOwner();
+        User receiver = store.getUser();
 
         // 4. 다른 사람들은 들어올 수 없도록 1:1 (구매자:판매자) 채팅방 구성하기
         Room messageRoom = roomRepository.findBySenderNameAndReceiverName(sender.getName(), receiver.getName());
