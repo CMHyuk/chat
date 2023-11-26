@@ -25,7 +25,7 @@ public class Room extends BaseEntity {
 
     private String receiverName;
 
-    @OneToMany(mappedBy = "chatRoom", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<Message> messages = new ArrayList<>();
 
     @ManyToOne(fetch = FetchType.LAZY)

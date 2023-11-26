@@ -9,7 +9,5 @@ import java.util.Optional;
 
 public interface MessageRepository extends JpaRepository<Message, Long> {
     List<Message> findTop100ByRoomOrderById(Room room);
-    Optional<Message> findTopByRoomOrderById(Room room);
-    Optional<Message> findTopByRoomOrderBySentTimeDesc(Room room);
 }
 
